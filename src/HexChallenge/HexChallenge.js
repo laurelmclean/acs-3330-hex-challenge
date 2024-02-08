@@ -32,11 +32,11 @@ function HexChallenge() {
 
     return (
         <div className="App">
-            <h1>Color Challenge</h1>
+            <h1>Hex Color Challenge</h1>
             <div className="hex-container">
-                <div style={{ backgroundColor: color1 }} onClick={() => setUserAnswer(color1)} className="hex-box" />
-                <div style={{ backgroundColor: color2 }} onClick={() => setUserAnswer(color2)} className="hex-box" />
-                <div style={{ backgroundColor: color3 }} onClick={() => setUserAnswer(color3)} className="hex-box" />
+                <div style={{ backgroundColor: color1 }} onClick={() => setUserAnswer(color1)} className="hex-box">{userAnswer === '' ? '' : <p>{color1}</p>}</div>
+                <div style={{ backgroundColor: color2 }} onClick={() => setUserAnswer(color2)} className="hex-box">{userAnswer === '' ? '' : <p>{color2}</p>}</div>
+                <div style={{ backgroundColor: color3 }} onClick={() => setUserAnswer(color3)} className="hex-box">{userAnswer === '' ? '' : <p>{color3}</p>}</div>
             </div>
             <h2>Click the swatch that matches: {answer}</h2>
             {userAnswer === '' ? '' : userAnswer === answer ? <h1>Correct</h1> : <h1>Incorrect</h1>}
